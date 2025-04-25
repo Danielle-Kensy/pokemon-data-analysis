@@ -13,13 +13,13 @@
 
 Primeiro, crie um ambiente virtual para o projeto. Isso é recomendado para evitar conflitos de dependências com outras aplicações Python.
 
-#### No Linux/macOS:
+##### No Linux/macOS🐧:
 ```bash
 python3 -m venv venv
 source venv/bin/activate
 ```
 
-#### No Windows:
+##### No Windows🪟:
 ```bash
 python -m venv venv
 venv\Scripts\activate
