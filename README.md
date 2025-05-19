@@ -30,7 +30,7 @@ Após ativar o ambiente virtual, instale as dependências do projeto:
 pip install -r requirements.txt
 ```
 
-### 3. Executando a Limpeza  dos Dados
+### 3. Executando a Limpeza dos Dados e Análises exploratórias.
 ```
 python main.py
 ```
