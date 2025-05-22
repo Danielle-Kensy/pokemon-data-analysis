@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Pokémon Dashboard</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        background-color: #f8f9fa;
+        color: #2b2b2b;
+        margin: 0;
+        padding: 0;
+      }
+
+      header {
+        background: linear-gradient(to right, #ffcb05, #3b4cca);
+        padding: 20px;
+        text-align: center;
+        color: white;
+        position: relative;
+      }
+
+      header h1 {
+        margin: 0;
+        font-size: 2.5rem;
+      }
+
+      .pokeball {
+        position: absolute;
+        width: 50px;
+        top: 10px;
+      }
+
+      .pokeball.left {
+        left: 20px;
+      }
+
+      .pokeball.right {
+        right: 20px;
+      }
+
+      .container {
+        padding: 40px;
+        max-width: 1400px;
+        margin: auto;
+      }
+
+      .chart-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        justify-content: center;
+      }
+
+      .chart-card {
+        background-color: #ffffff;
+        border-radius: 15px;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+        padding: 25px;
+        flex: 1 1 calc(50% - 30px);
+        max-width: 500px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        border: 1px solid #eee;
+      }
+
+      .chart-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+      }
+
+      .chart-card img {
+        width: 100%;
+        max-width: 550px;
+      }
+
+      footer {
+        text-align: center;
+        padding: 20px;
+        font-size: 0.9rem;
+        color: #888;
+      }
+
+      @media (max-width: 768px) {
+        .chart-card {
+          flex: 1 1 100%;
+        }
+
+        .pokeball {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <img
+        src="https://cdn-icons-png.flaticon.com/512/188/188987.png"
+        class="pokeball left"
+        alt="Pokeball"
+      />
+      <h1>Pokémon Dashboard</h1>
+      <img
+        src="https://cdn-icons-png.flaticon.com/512/188/188987.png"
+        class="pokeball right"
+        alt="Pokeball"
+      />
+    </header>
+
+    <div class="container">
+      <div class="chart-grid">
+        
+        <div class="chart-card">
+          <img src="data/graphics/0.1_tipos_mais_comuns_por_geracao.png" alt="0.1 tipos mais comuns por geracao" />
+        </div>
+        
+        <div class="chart-card">
+          <img src="data/graphics/0_tipos_primarios.png" alt="0 tipos primarios" />
+        </div>
+        
+        <div class="chart-card">
+          <img src="data/graphics/1_comparacao_atributos_entre_lendarios_e_nao.png" alt="1 comparacao atributos entre lendarios e nao" />
+        </div>
+        
+        <div class="chart-card">
+          <img src="data/graphics/1_comparacao_atributos_entre_lendarios_e_nao_grafico.png" alt="1 comparacao atributos entre lendarios e nao grafico" />
+        </div>
+        
+        <div class="chart-card">
+          <img src="data/graphics/1_comparacao_atributos_entre_lendarios_e_nao_pizza.png" alt="1 comparacao atributos entre lendarios e nao pizza" />
+        </div>
+        
+        <div class="chart-card">
+          <img src="data/graphics/1_e_lendario.png" alt="1 e lendario" />
+        </div>
+        
+        <div class="chart-card">
+          <img src="data/graphics/2_attack_por_tipo.png" alt="2 attack por tipo" />
+        </div>
+        
+        <div class="chart-card">
+          <img src="data/graphics/2_defense_por_tipo.png" alt="2 defense por tipo" />
+        </div>
+        
+        <div class="chart-card">
+          <img src="data/graphics/2_hp_por_tipo.png" alt="2 hp por tipo" />
+        </div>
+        
+        <div class="chart-card">
+          <img src="data/graphics/2_sp_attack_por_tipo.png" alt="2 sp attack por tipo" />
+        </div>
+        
+        <div class="chart-card">
+          <img src="data/graphics/2_sp_defense_por_tipo.png" alt="2 sp defense por tipo" />
+        </div>
+        
+        <div class="chart-card">
+          <img src="data/graphics/2_speed_por_tipo.png" alt="2 speed por tipo" />
+        </div>
+        
+        <div class="chart-card">
+          <img src="data/graphics/2_tipo_por_atributos.png" alt="2 tipo por atributos" />
+        </div>
+        
+        <div class="chart-card">
+          <img src="data/graphics/3_tipo_por_geracao.png" alt="3 tipo por geracao" />
+        </div>
+        
+        <div class="chart-card">
+          <img src="data/graphics/3_tipo_por_geracao_heatmap.png" alt="3 tipo por geracao heatmap" />
+        </div>
+        
+        <div class="chart-card">
+          <img src="data/graphics/4_geracao_stats.png" alt="4 geracao stats" />
+        </div>
+        
+        <div class="chart-card">
+          <img src="data/graphics/5_captura_dificuldade.png" alt="5 captura dificuldade" />
+        </div>
+        
+        <div class="chart-card">
+          <img src="data/graphics/6_força_por_resistencia.png" alt="6 força por resistencia" />
+        </div>
+        
+        <div class="chart-card">
+          <img src="data/graphics/7_ataque_por_tipo.png" alt="7 ataque por tipo" />
+        </div>
+        
+      </div>
+    </div>
+
+    <footer>Made with ❤️ using Jinja2 and Pokémon data</footer>
+  </body>
+</html>

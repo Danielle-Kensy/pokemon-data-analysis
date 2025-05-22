@@ -2,14 +2,15 @@ from sklearn.metrics import confusion_matrix
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-def plot_generation_confusion_matrix(modelo, X_test, y_test):
-    # Previsões
+
+def plot_generation_confusion_matrix(modelo, X_test, y_test, save_path=None):
+    # pervisão
     y_pred = modelo.predict(X_test)
 
-    # Gera matriz de confusão
+    # gerando matriz
     cm = confusion_matrix(y_test, y_pred, labels=sorted(y_test.unique()))
 
-    # Plot com heatmap
+    # gerando heatmap
     plt.figure(figsize=(8, 6))
     sns.heatmap(cm, annot=True, fmt='d', cmap='YlGnBu',
                 xticklabels=sorted(y_test.unique()),
@@ -18,4 +19,9 @@ def plot_generation_confusion_matrix(modelo, X_test, y_test):
     plt.ylabel('Geração Real')
     plt.title('Matriz de Confusão - Previsão da Geração')
     plt.tight_layout()
+
+    # Salvar como PNG se o caminho for fornecido
+    if save_path:
+        plt.savefig(save_path, format='png', dpi=300)
+
     plt.show()
