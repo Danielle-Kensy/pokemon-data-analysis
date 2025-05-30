@@ -1,7 +1,5 @@
 import pandas as pd
 
-import pandas as pd
-
 def load_data(path):
     #Carrega os dados do arquivo CSV
     return pd.read_csv(path)
@@ -14,7 +12,7 @@ def clean_pokemon_data(df):
     df['percentage_male'].fillna(0, inplace=True)
     df['type1'].fillna('None', inplace=True)
     df['type2'].fillna('None', inplace=True)
-    df['abilities'] = df['abilities'].apply(lambda x: eval(x) if isinstance(x, str) else x)  # Converter string para lista
+    df['abilities'] = df['abilities'].apply(lambda x: eval(x) if isinstance(x, str) else x)
 
     # Remove ou corrigir valores estranhos
     df['height_m'].replace(0, pd.NA, inplace=True)
